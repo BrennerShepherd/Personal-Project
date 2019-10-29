@@ -6,7 +6,7 @@ public class PlayerControllerX : MonoBehaviour
 {
     public float speed;
     public float horizontalInput;
-    public GameObject projectile;
+    public GameObject projectilePrefab;
     private float xRange = 40;
 
     // Start is called before the first frame update
@@ -31,6 +31,11 @@ public class PlayerControllerX : MonoBehaviour
 
         // move the plane forward at a constant rate
         transform.Translate(Vector3.right * Time.deltaTime * speed * horizontalInput);
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+        }
 
         
     }

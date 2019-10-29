@@ -13,24 +13,21 @@ public class SpawnManager : MonoBehaviour
 
 
     private float startDelay = 2;
-    private float spawnInterval = 4.0f;
+    private float spawnInterval = 2.0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        //Invoke("SpawnRandomPlane", startDelay);
+        InvokeRepeating("SpawnRandomPlane", startDelay, spawnInterval);
     }
 
     // Update is called once per frame
-    void Update()
+    void SpawnRandomPlane ()
     {
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
-            int planeIndex = Random.Range(0, planePrefabs.Length);
-            Instantiate(planePrefabs[planeIndex], spawnPos,
-            planePrefabs[planeIndex].transform.rotation);
-        }
+        int planeIndex = Random.Range(0, planePrefabs.Length);
+        Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
+
+        Instantiate(planePrefabs[planeIndex], spawnPos, planePrefabs[planeIndex].transform.rotation);
     }
 }
 
@@ -41,3 +38,11 @@ public class SpawnManager : MonoBehaviour
 //int planeIndex = Random.Range(0, planePrefabs.Length);
 //Vector3 spawnPos = new Vector3(Random.Range(spawnLimitXLeft, spawnLimitXRight), spawnPosZ, 0);
 //Invoke("SpawnRandomPlane", Random.Range(3, 5));
+
+     //if (Input.GetKeyDown(KeyCode.S))
+       // {
+            //Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
+//int planeIndex = Random.Range(0, planePrefabs.Length);
+//Instantiate(planePrefabs[planeIndex], spawnPos,
+//planePrefabs[planeIndex].transform.rotation);
+       // }

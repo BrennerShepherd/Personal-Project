@@ -13,9 +13,11 @@ GameObject:
   - component: {fileID: 1323702923236049601}
   - component: {fileID: 5125193704265646779}
   - component: {fileID: 6359130092518727918}
+  - component: {fileID: -1820970469626412799}
+  - component: {fileID: 6494873171258924146}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,3 +109,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 40
+--- !u!114 &-1820970469626412799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685031843642957965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4f23c21f2e9c4fc0bab5484ac5862a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topBounds: 100
+  lowerBound: 0
+--- !u!114 &6494873171258924146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685031843642957965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211a38fcd0a68417286aae5877388be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

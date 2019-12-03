@@ -91,9 +91,12 @@ GameObject:
   - component: {fileID: 330015160827892202}
   - component: {fileID: 5264247388458938483}
   - component: {fileID: 4668972498381832474}
+  - component: {fileID: 7593069878921993122}
+  - component: {fileID: 6956945085280712612}
+  - component: {fileID: -8369756648678149763}
   m_Layer: 0
   m_Name: Small_Plane02
-  m_TagString: Untagged
+  m_TagString: Enemy plane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,7 +133,7 @@ MeshCollider:
   m_GameObject: {fileID: 5264247388460936883}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
@@ -186,3 +189,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 40
+--- !u!114 &7593069878921993122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5264247388460936883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4f23c21f2e9c4fc0bab5484ac5862a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topBounds: 100
+  lowerBound: -10
+--- !u!114 &6956945085280712612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5264247388460936883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211a38fcd0a68417286aae5877388be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &-8369756648678149763
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5264247388460936883}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 19.097528, y: 4.7187066, z: 12.879532}
+  m_Center: {x: 0, y: 2.3593533, z: -3.0109177}
